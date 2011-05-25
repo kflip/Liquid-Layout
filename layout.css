@@ -1,0 +1,72 @@
+/* //example widths for blog layout
+$col_right_width: 25%;
+$col_center_width: 25%;
+$col_left_width: 50%;
+*/
+/* // example widths for 3 col layout
+$col_right_width: 25%;
+$col_center_width: 50%;
+$col_left_width: 25%;
+*/
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* This removes the border around the viewport in old versions of IE */
+  width: 100%;
+  background: #fff;
+  min-width: 600px;
+  /* Minimum width of layout - remove line if not required */
+  /* The min-width property does not work in old versions of Internet Explorer */
+  font-size: 90%; }
+
+/* column container */
+.colmask {
+  position: relative;
+  /* This fixes the IE7 overflow hidden bug */
+  clear: both;
+  float: left;
+  width: 100%;
+  /* width of whole page */
+  overflow: hidden;
+  /* This chops off any overhanging divs */ }
+
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+  float: left;
+  width: 100%;
+  /* width of page */
+  position: relative; }
+
+.col1,
+.col2,
+.col3 {
+  float: left;
+  position: relative;
+  padding: 0 0 1em 0;
+                  	/* no left and right padding on columns, we just make them narrower instead 
+				only padding top and bottom is included here, make it whatever value you need */
+  overflow: hidden; }
+
+/* 3 Column settings */
+/* 3 Column blog style settings */
+.blogstyle .colmid {
+  right: 25%; }
+
+.blogstyle .colleft {
+  right: 25%; }
+
+.blogstyle .col1 {
+  width: 46%;
+  left: 52%; }
+
+.blogstyle .col2 {
+  width: 46%;
+  width: 21%;
+  left: 56%; }
+
+.blogstyle .col3 {
+  width: 21%;
+  left: 60%; }

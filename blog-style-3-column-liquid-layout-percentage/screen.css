@@ -1,13 +1,3 @@
-body {
-	margin:0;
-	padding:0;
-	border:0;			/* This removes the border around the viewport in old versions of IE */
-	width:100%;
-	background:#fff;
-	min-width:600px;    	/* Minimum width of layout - remove line if not required */
-					/* The min-width property does not work in old versions of Internet Explorer */
-	font-size:90%;
-}
 a {
 	color:#369;
 }
@@ -96,56 +86,19 @@ img {
 	padding:6px 15px !important;
 	text-align:right;
 }
-/* column container */
-.colmask {
-	position:relative;		/* This fixes the IE7 overflow hidden bug */
-	clear:both;
-	float:left;
-	width:100%;				/* width of whole page */
-	overflow:hidden;			/* This chops off any overhanging divs */
-}
-/* common column settings */
-.colright,
-.colmid,
-.colleft {
-	float:left;
-	width:100%;				/* width of page */
-	position:relative;
-}
-.col1,
-.col2,
-.col3 {
-	float:left;
-	position:relative;
-	padding:0 0 1em 0;		/* no left and right padding on columns, we just make them narrower instead 
-						only padding top and bottom is included here, make it whatever value you need */
-	overflow:hidden;
-}
-/* 3 Column blog style settings */
+
+
 .blogstyle {
 	background:#eee;			/* right column background colour */
 }
 .blogstyle .colmid {
-	right:25%;				/* width of the right column */
 	background:#f4f4f4;		/* center column background colour */
 }
 .blogstyle .colleft {
-	right:25%;				/* width of the middle column */
 	background:#fff;			/* left column background colour */
 }
-.blogstyle .col1 {
-	width:46%;				/* width of center column content (column width minus padding on either side) */
-	left:52%;				/* 100% plus left padding of center column */
-}
-.blogstyle .col2 {
-	width:21%;				/* Width of left column content (column width minus padding on either side) */
-	left:56%;				/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
-}
-.blogstyle .col3 {
-	width:21%;				/* Width of right column content (column width minus padding on either side) */
-	left:60%;				/* Please make note of the brackets here:
-						(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
-}
+
+
 /* Footer styles */
 #footer {
 	clear:both;

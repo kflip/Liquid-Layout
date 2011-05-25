@@ -1,0 +1,128 @@
+
+$layout_mode: col3blog;  //col3,col3blog,
+
+/* //example widths for blog layout
+$col_right_width: 25%;
+$col_center_width: 25%;
+$col_left_width: 50%;
+*/
+
+/* // example widths for 3 col layout
+$col_right_width: 25%;
+$col_center_width: 50%;
+$col_left_width: 25%;
+*/
+$col_right_width: 25%;
+$col_center_width: 25%;
+$col_left_width: 50%;
+
+
+$col_center_padding_left: 2%;
+$col_center_padding_right: 2%;
+$col_left_padding_left: 2%;
+$col_left_padding_right: 2%;
+$col_right_padding_left: 2%;
+$col_right_padding_right: 2%;
+
+//for all 3 col layouts
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* This removes the border around the viewport in old versions of IE */
+  width: 100%;
+  background: #fff;
+  min-width: 600px;
+  /* Minimum width of layout - remove line if not required */
+  /* The min-width property does not work in old versions of Internet Explorer */
+  font-size: 90%;
+}
+
+
+//for all 3 col layouts
+/* column container */
+.colmask {
+  position: relative;
+  /* This fixes the IE7 overflow hidden bug */
+  clear: both;
+  float: left;
+  width: 100%;
+  /* width of whole page */
+  overflow: hidden;
+  /* This chops off any overhanging divs */ 
+}
+
+//for all 3 col layouts
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+  float: left;
+  width: 100%;
+  /* width of page */
+  position: relative;
+}
+
+.col1,
+.col2,
+.col3 {
+  float: left;
+  position: relative;
+  padding: 0 0 1em 0;
+                  	/* no left and right padding on columns, we just make them narrower instead 
+				only padding top and bottom is included here, make it whatever value you need */
+  overflow: hidden;
+}
+
+
+
+/* 3 Column settings */
+@if $layout_mode == col3{
+
+	.threecol .colmid {
+	  right: $col_right_width;
+	}
+
+	.threecol .colleft {
+	  right: $col_center_width;
+	}
+
+	.threecol .col1 {
+	  width: $col_center_width - $col_center_padding_left - $col_center_padding_left;
+	  left: 100% + $col_center_padding_left;
+	}  
+	.threecol .col2 {
+	  width: $col_left_width - $col_left_padding_left - $col_right_padding_left;
+	  left: $col_right_width + $col_center_padding_left + $col_center_padding_right + $col_left_padding_left;
+	} 
+	.threecol .col3 {
+	  width: $col_right_width - $col_right_padding_left - $col_right_padding_right;
+	  left: 100% - $col_left_width + $col_center_padding_left + $col_center_padding_right + $col_left_padding_left + $col_left_padding_right + $col_right_padding_left;
+	}
+
+}
+
+@if $layout_mode == col3blog{
+	/* 3 Column blog style settings */
+
+	.blogstyle .colmid {
+		right:$col_right_width;				
+	}
+	.blogstyle .colleft {
+		right:$col_center_width;			
+	}
+	.blogstyle .col1 {
+		width: $col_left_width - $col_left_padding_left - $col_left_padding_right;
+		left:$col_left_width + $col_left_padding_left;
+	}
+	.blogstyle .col2 {
+		width:$col_left_width - $col_left_padding_left - $col_left_padding_right;				
+		width:$col_center_width - $col_center_padding_left - $col_center_padding_right;			
+
+		left:$col_left_width + $col_center_padding_left + $col_left_padding_right + $col_left_padding_left;			
+	}
+	.blogstyle .col3 {
+		width:$col_right_width - $col_right_padding_left - $col_right_padding_right;			
+		left:100% - $col_left_width + $col_center_padding_left + $col_center_padding_right + $col_left_padding_left + $col_left_padding_right + $col_right_padding_left;
+	}
+}

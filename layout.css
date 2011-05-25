@@ -51,22 +51,20 @@ body {
   overflow: hidden; }
 
 /* 3 Column settings */
-/* 3 Column blog style settings */
-.blogstyle .colmid {
+.threecol .colmid {
   right: 25%; }
 
-.blogstyle .colleft {
-  right: 25%; }
+.threecol .colleft {
+  right: 50%; }
 
-.blogstyle .col1 {
+.threecol .col1 {
   width: 46%;
-  left: 52%; }
+  left: 102%; }
 
-.blogstyle .col2 {
-  width: 46%;
+.threecol .col2 {
   width: 21%;
-  left: 56%; }
+  left: 31%; }
 
-.blogstyle .col3 {
+.threecol .col3 {
   width: 21%;
-  left: 60%; }
+  left: 85%; }

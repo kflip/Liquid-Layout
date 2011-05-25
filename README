@@ -1,0 +1,19 @@
+this is a sass version of Matthew James Taylor's CSS-only column layouts. (http://matthewjamestaylor.com/blog/perfect-multi-column-liquid-layouts)
+there is only one sass file for all layouts needed. (layout.scss)
+all the example code is left in screen.css
+
+open layout.scss and type in your preferred layout and column widths and you re ready to go!
+f.e.:
+$layout_mode: col3;  //col3,col3blog,
+$col_right_width: 25%;
+$col_center_width: 50%;
+$col_left_width: 25%;
+
+use lean.html if you want to start with your own website right away without any example html-content
+
+
+limitations:
+Currently only the 3 column & 3 column-blog layouts are implemented
+
+
+
